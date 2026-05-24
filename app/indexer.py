@@ -1,3 +1,4 @@
+import os
 import math
 import re
 from collections import Counter
@@ -5,9 +6,10 @@ from dataclasses import dataclass
 import json
 from pathlib import Path
 
+base_path: Path = Path(os.getenv("BASE_PATH", "/tmp/knowledgebase"))
 
-DOCS_DIR = Path(__file__).resolve().parents[3] / "docs"
-INDEX_PATH = Path(__file__).resolve().parents[3] / ".kb" / "index.json"
+DOCS_DIR = base_path / "docs"
+INDEX_PATH = base_path / ".kb" / "index.json"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 STOP_WORDS = {
