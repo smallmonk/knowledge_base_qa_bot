@@ -11,7 +11,7 @@ POST /chat
 OpenAI API key is required before running the server:
 
 ```bash
-export OPENAI_API_KEY="sk-..."
+export GEMINI_API_KEY="GEMINI_API_KEY"
 ```
 
 The key is used for final answer generation.

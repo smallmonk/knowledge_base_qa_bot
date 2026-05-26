@@ -35,7 +35,7 @@ Answer these before you start coding:
 Before running the server, set your OpenAI API key:
 
 ```bash
-export OPENAI_API_KEY="sk-..."
+export GEMINI_API_KEY="GEMINI_API_KEY"
 ```
 
 OpenAI is used for final answer generation.
